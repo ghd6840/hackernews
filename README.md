@@ -6,3 +6,5 @@
 
 2. Reference
 - Hacker News API »ç¿ë (https://github.com/HackerNews/API)
+- Tailwind CSS
+- FontAwesome
