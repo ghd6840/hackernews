@@ -37,15 +37,16 @@ const store: Store = {
 };
 
 class Api {
-  url: string;
   ajax: XMLHttpRequest;
-  constructor(url: string){
-    this.url = url;
+  url: string;
+
+  constructor(url: string) {
     this.ajax = new XMLHttpRequest();
+    this.url = url;
   }
 
-  protected getRequest<AjaxResponse>(): AjaxResponse {
-    this.ajax.open('Get', this.url, false);
+  getRequest<AjaxResponse>(): AjaxResponse {
+    this.ajax.open('GET', this.url, false);
     this.ajax.send();
 
     return JSON.parse(this.ajax.response);
